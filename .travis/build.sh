@@ -59,6 +59,15 @@ function build() {
 	echo "============================================="
 	echo "- $PLATFORM $TARGET $CPU"
 	echo "============================================="
+
+	echo ""
+	echo ""
+	echo ""
+	echo "- Disk usage before build"
+	echo "---------------------------------------------"
+	df -h
+	echo "---------------------------------------------"
+
 	# Output the commands available to make it easier to debug.
 	echo ""
 	echo "- make help ($PLATFORM $TARGET $CPU)"
@@ -234,6 +243,14 @@ function build() {
 		)
 		echo "============================================="
 	fi
+
+	echo ""
+	echo ""
+	echo ""
+	echo "- Disk usage after build"
+	echo "---------------------------------------------"
+	df -h
+	echo "---------------------------------------------"
 
 	if [ ! -z "$CLEAN_CHECK" ]; then
 		echo ""
