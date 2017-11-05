@@ -5,6 +5,15 @@ set -e
 echo ""
 echo ""
 echo ""
+echo "- Disk usage before setup"
+echo "---------------------------------------------"
+df -h
+echo "---------------------------------------------"
+
+
+echo ""
+echo ""
+echo ""
 echo "- Fetching non shallow to get git version"
 echo "---------------------------------------------"
 git fetch origin --unshallow && git fetch origin --tags
@@ -97,3 +106,11 @@ time scripts/download-env.sh
 set +x
 set +e
 source scripts/enter-env.sh
+
+echo ""
+echo ""
+echo ""
+echo "- Disk usage after setup"
+echo "---------------------------------------------"
+df -h
+echo "---------------------------------------------"
